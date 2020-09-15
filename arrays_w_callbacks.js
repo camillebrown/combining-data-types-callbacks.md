@@ -131,3 +131,59 @@ function checkWord(word) {
 }
 panagram.some(checkWord)
 
+///=================================HUNGRY FOR MORE=================================///
+
+
+///=================Reduce================///
+//The reduce() method reduces the array to a single value.
+//The return value of the function is stored in an accumulator (result/total).
+//Note: find() does not change the original array.
+
+// Add all the numbers in the array together using the reduce method
+
+const sum = (a, b) => {
+    return a + b;
+}
+nums.reduce(sum)
+
+// concatenate all the words using reduce
+
+const concat = (word,word2) => {
+    return word+word2
+}
+panagram.reduce(concat)
+
+///=================Sort================///
+//The sort order can be either alphabetic or numeric, and either ascending (up) or descending (down).
+
+// Try to sort without any arguments, do you get what you'd expect with the numbers array?
+//Try to sort without any arguments, do you get what you'd expect with the words array? 
+    //By default, the sort() method sorts the values as strings in alphabetical and ascending order.
+
+// Sort the numbers in ascending order
+
+const compare = (a,b) => {
+    return a-b
+}
+nums.sort(compare)
+
+// Sort the numbers in descending order
+const compare = (a,b) => {
+    return b-a
+}
+nums.sort(compare)
+
+// Sort the words in ascending order
+panagram.sort()
+// Sort the words in descending order
+const descend = (a, b) => {
+    if (a > b) {
+        return -1;
+    }
+    if (b > a) {
+        return 1;
+    }
+    return 0;
+};
+
+panagram.sort(descend)
